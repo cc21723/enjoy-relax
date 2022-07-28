@@ -1,0 +1,108 @@
+#banner .bxSlider img{
+    width: 100%;
+}
+
+main{
+    display: flex;
+    margin: 12px 0;
+    align-items: flex-start;
+}
+#news{
+    background-color: rgba(6, 75, 127, 0.6);
+    flex: 0 0 calc(30% - 60px);
+    margin: 0 10px;
+    padding: 20px;
+}
+#news ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#news ul li{
+    border-bottom: 1px dashed #E8D0AA;
+    margin-bottom: 20px;
+    padding: 0 5px 8px 97px;
+    color: #E8D0AA;
+
+    font-size: 0.95em;
+    position: relative;
+}
+.hot::before{
+ content: "Hot";
+ background-color: red;
+ color: snow;
+ font-size: 8px;
+ padding: 0 6px;
+ display: inline-block;
+ transform: scale(0.8) rotate(-10deg);
+}
+.porm::before{
+    content: "促銷";
+    background-color: rgb(248, 214, 18);
+    color: rgb(255, 0, 0);
+    font-size: 8px;
+    padding: 0 6px;
+    display: inline-block;
+    transform:translate(-3px , -3px) scale(1) rotate(-10deg);
+   }
+#news ul time{
+    /* flex-wrap: wrap; */
+    position: absolute;
+    top: 0;
+    left: 5px;
+    /* padding-left: 5px; */
+}
+#ca{
+    /* background-color: #fcc; */
+    flex: 7;
+    display: flex;
+    flex-wrap: wrap; /*超出範圍換行*/
+}
+.caItem{
+    background-color: rgba(255, 255, 255, 0.3);
+    flex: 0 0 calc(50% - 40px);
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 350px;
+}
+.caItem h2{
+    color: rgb(32, 58, 38);
+    margin: 0 0 3px 0;
+    letter-spacing: 0.2em;
+}
+.caItem p{
+    color:rgb(48, 80, 72);
+    letter-spacing: 0.1em;
+    text-align: justify;
+}
+.caItem img{
+    width: 100%;
+}
+@media (max-width:600px){
+    main{
+        display: block;
+    }
+    #news{
+        margin-bottom: 5px;
+    }
+    #ca{
+        margin-left: 10px;
+        display: block;
+    }
+    
+}
+@media (max-width:960px) and (min-width:601px) {
+    #news ul li{
+        padding: 25px 0 0 0;
+    }
+}
+@media (max-width:1367px) and(min-width:961px) {
+    #news{
+        flex: 0 0 calc(20% - 80px);
+
+    }
+    .caItem{
+        flex: 1;
+    }
+}

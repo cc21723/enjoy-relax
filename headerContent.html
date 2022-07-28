@@ -1,0 +1,206 @@
+<a href="index.html"><img id="logo"src="images/logo.svg" alt="enjoy relax logo"></a>
+        <nav id="mainNav">
+            <ul><!--flex-container-->
+                <li>
+                    <div>
+                        <img class="photo" src="images/icon150.gif" alt="">
+                        <a href="javaScript:;">享放鬆民宿</a><!--flex-item-->
+                    </div>
+                    
+                    <ul>
+                        <li><a href="index.html">享放鬆民宿</a></li>
+                        <li><a href="aboutUs.html">關於享放鬆</a></li>
+                    </ul>   
+                </li>
+                <li> 
+                    <div>
+                        <img class="photo" src="images/icon150.gif" alt="">
+                        <a href="room.html">放鬆房型</a><!--flex-item-->
+                    </div>
+                </li>
+                <li>
+                    <div>
+
+                        <img class="photo" src="images/icon150.gif" alt="">
+                        <a href="booking.html">預訂房間</a><!--flex-item-->
+                    </div>
+                    
+                </li>
+                <li> 
+                    <div>
+                        <img class="photo" src="images/icon150.gif" alt="">
+                        <a href="qa.html">訂房須知</a><!--flex-item-->
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img class="photo" src="images/icon150.gif" alt="">
+                        <a href="findUs.html">找到我們</a><!--flex-item-->
+                    </div>           
+                </li>
+            </ul>
+        </nav>
+        <nav id="memNav">
+            <ul class="clr">
+                <!-- 購物車內的數量 (Button 內包含 icon, 數量 badge) -->
+                <li class="dropdown">
+                    <a class="btn btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-cart-shopping"></i>購物車<i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+            
+                    <div class="dropdown-menu dropdown-menu-end " style="min-width: 300px;z-index: 999999;" data-offset="400">
+                        <div class="px-4 py-3">
+                            <!-- <h6>已選擇商品</h6> -->
+                            <table class="table table-sm">
+                            <tbody>
+                                <tr>
+                                <td class="align-middle text-center">
+                                    <a href="#removeModal" class="texr-muted" data-bs-toggle="modal" data-title="刪除 海景雙人房 1 晚">
+                                    <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="align-middle">海景雙人房</td>
+                                <td class="align-middle">1 晚</td>
+                                <td class="align-middle text-right">$3,500</td>
+                                </tr>
+                                <tr>
+                                <td class="align-middle text-center">
+                                    <a href="#removeModal" class="texr-muted" data-bs-toggle="modal" data-title="刪除 海景陽台雙人房 1 晚">
+                                    <i class="fas fa-trash-alt " aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="align-middle">海景陽台雙人房</td>
+                                <td class="align-middle">1 晚</td>
+                                <td class="align-middle text-right">$4,800</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            <a href="shoppingCart-ckeckout.html" class="btn  d-grid gap-2">
+                            結帳去
+                            </a>
+                        </div>
+            
+                    </div>
+                </li>
+                <!-- <li>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i>購物車<i class="fa-solid fa-cart-shopping"></i></a>
+                    
+                </li> -->
+                <li><a href="#" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-arrow-right-to-bracket"></i>登入<i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                <li><a href="#" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#registeModal"><i class="fa-solid fa-user-plus"></i>加入會員<i class="fa-solid fa-user-plus"></i></a></li>
+            </ul>
+        </nav>
+        <a href="javaScript:;" id="menuBtn" >
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+
+        <!-- 購物車表單 -->
+        <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title">刪除商品</h5>
+                        <button type="button" class="Close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>是否確認刪除商品</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">否</button>
+                        <button type="button" class="btn btn-outline-danger px-5">是</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content ">
+                    <div class="modal-header loginColor">
+                        <h5 class="modal-title " id="loginModalLabel">登入服務</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label textColor">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入email">
+                                <div id="emailHelp" class="form-text">我們不會隨意將您的email給予第三者</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label textColor" >密碼</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label textColor" for="exampleCheck1">記住帳號</label>
+                            </div> 
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="me-auto" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registeModal" style="color: #064b7f;">還沒有帳號?</a>
+                        <button type="button" class="btn registeColor" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn loginColor">登入</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- registe Modal -->
+        <div class="modal fade" id="registeModal" tabindex="-1" aria-labelledby="registeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" >
+                <div class="modal-content">
+                    <div class="modal-header registeColor">
+                        <h5 class="modal-title" id="registeModalLabel">註冊服務</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2 class="textColor">註冊享放鬆</h2>
+                                    <h5 class="textColor">訂房前登入會員累積點數</h5>
+                                    <p>兌點1點=現抵1元，消費立即折抵更有感。</p> 
+                                    <h5 class="textColor">平日訂房點數5倍送</h5>
+                                    <p>週日至週四為平日，訂房享有點數5倍送。</p>
+                                    <h5 class="textColor">連續假期預訂點數3倍送</h5>
+                                    <p>凡是於連續假期前一個月訂房，點數享3倍送。</p>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label textColor">Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="請輸入email">
+                                        <div id="emailHelp" class="form-text">我們不會隨意將您的email給予第三者</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label textColor">密碼</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label textColor">確認密碼</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label textColor" for="exampleCheck1">同意條款</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="me-auto" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: #064b7f;">已有帳號了?</a>
+                        <button type="button" class="btn registeColor" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn loginColor">註冊</button>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,58 @@
+.fontcolor{
+    color: #064b7f;
+}
+.formbgc{
+    padding: 30px 5px;
+    background-color: #ffffffb0;
+}
+main a{
+    /* list-style-type: none; */
+    text-decoration: none;
+    color: #064b7f;
+}
+.contactUs{
+    color: #064b7f;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 0;
+    /* color: #064b7f; */
+}
+.contactUs h3{
+    /* display: inline-block; */
+    /* border-bottom:3px solid #064b7f; */
+}
+.contactUs::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 2px;
+    left: 40px;
+    bottom: 0;
+    background-color: #f0f0f0;
+}
+.contactUs::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 2px;
+    left: 40px;
+    bottom: 0;
+    background-color: #064b7f;
+}
+.iconSet li{
+    list-style-type: none;
+    padding: 20px 0;
+}
+.iconSet i{
+    /* float: none; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #064b7f;
+    border-radius: 50%;
+}

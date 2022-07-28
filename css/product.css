@@ -1,0 +1,105 @@
+main{
+    display: flex;
+}
+#proMenu{
+    width: 162px;
+}
+
+#proMenu>ul>li>a{
+    background-image: url(../images/productMenuBg.png);
+    height: 40px;
+    color: snow;
+    display: block;
+    text-align: center;
+    line-height: 36px; /*以元素為主的行高，單欄式文字可以用line-height讓文字置中*/
+    /* border: 1px solid black; */
+    letter-spacing: 0.2em;
+}
+#proMenu ul ul{
+    padding: 10px 0 30px 0;
+
+    /* border: 1px solid red; */
+}
+#proMenu ul a{
+    /* margin: 10px 0; */
+}
+#proMenu ul ul li a{
+    display: block;
+    text-align: center;
+    line-height: 40px; /*以元素為主的行高，單欄式文字可以用line-height讓文字置中*/
+    border-bottom: 1px dashed white;
+    color: rgb(29, 44, 29);
+    margin: 0 20px;
+    padding-bottom: 5px;
+}
+#proMenu ul ul li a.nowPage::before{
+    content: '';
+    border: 7px solid transparent;
+    border-left-color: snow;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    padding-right: 5px;
+}
+#proList{
+    /* background-color: #fff; */
+    flex: 0 0 calc( 100% - 182px );
+    display: flex;
+    flex-wrap: wrap;
+}
+.proItem{
+    /* 擴張佔比 壓縮佔比 基準寬 */
+    /*0 0不縮放不足的部分自動填滿*/ 
+    flex: 0 0 calc(25% -  30px);
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+.proItem .proImg{
+    overflow: hidden;
+}
+.proItem:hover{
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.proItem img{
+    width: 100%;
+    transition: .5s;
+    /* transform:perspective(500px) rotateX(60deg); */
+}
+.proItem img:hover{
+    transform: scale(1.2);
+    /* transform:perspective(500px) rotateX(60deg); */
+}
+.proItem p::before{
+    background-color: rgb(68, 90,68);
+    color: snow;
+    border-radius: 30px;
+    padding: 0 12px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.proItem p:nth-of-type(1)::before{
+    content: '說明';
+}
+.proItem p:nth-of-type(2)::before{
+    content: '成分';
+}
+@media (max-width:600px) {
+    #proMenu{
+        display: none;
+    }
+    #proList{
+        flex: 1;
+    }
+    .proItem{
+        flex: 0 0 calc( 100% - 30px );
+    }
+}
+@media (max-width:960px) and (min-width:601px) {
+    .proItem{
+        flex: 0 0 calc(50% - 30px );
+    }
+}

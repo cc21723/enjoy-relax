@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@200&display=swap%27');
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    background-image: url(../images/sean.jpg);
+}
+header{
+    height: 150px;
+    position: relative;  
+    z-index: 99999;
+    background-color: #6388B9;
+
+}
+#logo{
+    /* margin: 20px 0 0 40px; */
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+/*後代選擇器*/
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 5px;
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+#menuBtn{
+    border: 3px solid wheat;
+    height: 50px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 9999;
+    /* border: 1px solid red; */
+}
+#menuBtn div{
+    background-color: #E8D0AA;
+    height: 5px;
+    margin: 8px;
+    transition: 1s;
+}
+#menuBtn.closeBtn div:nth-child(1){
+    transform: translate(0,13px) rotate(405deg);
+}
+#menuBtn.closeBtn div:nth-child(2){
+    /* transform: scale(0); */
+    display: none;
+}
+#menuBtn.closeBtn div:nth-child(3){
+    /* transform: translate(0,-13px) rotate(-405deg); */
+    transform: rotate(-405deg);
+}
+
+#mainNav{
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: calc(100% - 300px);
+
+}
+/*子代選擇器*/
+#mainNav>ul{
+    display: flex;
+}
+#mainNav>ul>li{
+    flex: 1;
+}
+
+#mainNav ul li a{
+    /* border-left: 1px dashed rgb(6, 74, 127);  */
+    color: #E8D0AA;
+    padding-right: 10px;
+    display: block;
+}
+#mainNav>ul>li>div>a:last-of-type{ /*最後一個種類樣式*/
+    /* border: none;  */
+}
+#mainNav>ul>li>div{
+    padding: 10px 0;
+    text-align: center;
+    line-height: 90px;
+    height: 70px;
+    /* border: 1px solid red; */
+}
+#mainNav>ul>li>div{
+    padding-bottom: 5px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 300;
+    position: relative;
+    overflow: hidden;
+    /* line-height: 30px; */
+}
+#mainNav>ul>li>div:hover{
+    background-image: radial-gradient(at center bottom,rgba(27, 81, 228, 0.747),rgba(255, 255, 255, 0) 65%);
+}
+#mainNav .photo{
+    width: 30px;
+    position: absolute;
+    top: -50px;
+    left: 40%;
+}
+#mainNav .photo img{
+    
+    /* background-image: url(../images/icon150.gif); */
+    display: block;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid rebeccapurple; */
+    /* position: absolute;
+    left: 20px;
+    top: 0; */
+}
+#mainNav ul li:hover .photo{
+    /* position: absolute; */
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+#mainNav ul ul{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 12px 20px;
+    /* display: none; */
+}
+#mainNav ul ul li a{
+    font-size: 0.9em;
+    padding: 0 5px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+#mainNav ul ul li{
+    margin-bottom: 8px;
+    padding-bottom: 8px;   
+}
+#mainNav ul ul li:hover{
+    border-bottom: 1px dashed #E8D0AA;
+    padding-bottom: 7px;
+}
+#memNav{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    
+}
+#memNav ul{
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#memNav ul li{
+    float: left; /*要搭配clear:both使用*/
+    margin: 0 10px;
+}
+#memNav ul a i{
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+#memNav ul a{
+    color: cornflowerblue;
+    font-size: 0.9em;
+    font-weight: 100;
+    padding-left: 20px;
+    position: relative;   
+    overflow: hidden;
+}
+
+#memNav ul a i:first-of-type{    
+    top: 5px;   
+}
+#memNav ul a:hover i:first-of-type{
+    top: -35px;
+    
+}
+#memNav ul li a:hover{
+    color: #e2bf86;
+}
+#memNav ul a i:last-of-type{
+    color: #e2bf86;
+    top: 35px; 
+}
+#memNav ul a:hover  i:last-of-type{
+    top:2px;
+}
+.clr::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#banner img{
+    width: 100%;
+}
+main{
+    min-height: 300px;
+}
+
+footer{
+    background: rgba(6, 75, 127, 0.6);
+    height: 300px;
+    padding: 30px 0;
+    color: #E8D0AA;
+}
+#footerList{
+    display: flex;
+    margin-bottom: 20px;
+    
+}
+.footerItem{
+    flex: 1; /*總和占比*/
+    text-align: center;
+    border-right: 1px dashed bisque;
+    padding: 30px;
+    position: relative;
+}
+.footerItem h2{
+    font-size: 20px;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5em; /*字距*/
+}
+.footerItem h2 i{
+    color: rgba(255, 250, 250, 0.363);
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.footerItem p{
+    font-size: 16px;
+    margin: 0 0 5px 0;
+}
+.footerItem:last-of-type{ /*最後一個種類樣式*/
+    border: none; 
+}
+small{
+    display: block;
+    text-align: center;
+}
+
+/*登入註冊按鈕*/
+.loginColor{
+    background-color: #064b7f;
+    color: #e2bf86;
+}
+.registeColor{
+    background-color: #e2bf86;
+    color: #064b7f;
+}
+.textColor{
+    color: #064b7f;
+}
+
+@media (max-width:600px){
+    header{
+        height: 200px;
+    }
+    #logo{
+        width: 100px;
+        /* left:30%; */
+        top: 10px;;
+
+    }
+    #mainNav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.699);
+        width: 100%;
+        height: 100%;
+        padding: 120px;
+        
+    }
+
+    #mainNav .photo{    
+        left: 45%;
+    }
+    #mainNav ul{
+        display: block;
+    }
+   
+    #mainNav ul li a{
+        border-right: none; 
+        /* border-bottom:1px dotted #E8D0AA; */
+        margin-bottom: 10px;
+    }
+    #memNav{
+        top: 150px;
+    }
+    footer{
+        /* background: none; */
+        height: 600px;
+        background-color: rgba(15, 17, 128, 0.5);
+    }
+    #footerList{
+        display: block;
+    }
+    .footerItem{
+        border-right: none;
+        border-bottom: 1px dashed #E8D0AA;
+    }
+}
+/* @media (min-width:601px) and (max-width:768px) {
+    footer{
+        background-color: #fcf;
+    }
+}
+@media (min-width:769px) and (max-width:1366px) {
+    footer{
+        background-color: #ccf;
+    }
+} */
+@media (max-width:960px) and (min-width:601px){
+    header{
+        height: 140px;
+       
+        z-index: 99999;
+    }
+    #logo{
+        top: 5px;
+        opacity: 0.5;
+    }
+    #mainNav{
+        width: 100%;
+        top: 60px;
+    }
+    
+}
