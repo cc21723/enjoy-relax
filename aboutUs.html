@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/b5c87f0d2e.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/comm.js"></script>
     <script>
@@ -19,27 +22,71 @@
                 mainNavff();
                
             });
-
+            $.ajax({
+                type:'get',
+                url:'json/eqIcon.json',
+                success: function(){
+                    alert('err');
+                },
+                success:function(jData){
+                    var product=jData.product.eqIcon;
+                    var item='';
+                    for(var i=0;i<product.length;i++){
+                        item+='<div><img src="icon/'+product[i].photo+'" alt="'+product[i].neme+'"><p>'+product[i].name+'</p></div>'
+                    }
+                    $('#eqIcon').html(item);
+                }
+            })
         })
     </script>
+
+
+
+</div>
 </head>
 <body>
     <div class="container">
         <header></header>
         <main>
+        
+            <nav class="p-5" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                
+                  <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">關於享放鬆</li>
+                </ol>
+              </nav>
             <div class="aboutUs px-5">
-                關於我們
+                關於享放鬆
             </div>
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                                    
-                        </div>
+            <section class="p-5">
+                <div class="row fontcolor pbgc">
+                    <div class="col-md-6 position-relative">
+                        <p>2022年6月正式營運。<br>
+                            位於「世界最美麗海灣」及「全球十大最佳世外桃源島嶼」的澎湖縣。<br>
+                            Villa 座落在馬公本島南方寧靜海灘旁，距離機場5分鐘車程。<br>
+                            海景、美麗沙灘夕陽、寧靜水岸。<br>
+                            只要國內班機１小時，馬上展開您的悠閒渡假生活。<br>
+                        </p>  
+          
+                <div class="text-end position-absolute bottom-0 end-0 findUs">
+                    <a  href="https://www.google.com.tw/maps?q=23.5589583,119.5859256">點擊此處找到我們</a>           
+                </div>  
+                </div>
+                    <img class="col-md-6" src="imgroom/villa.jpg" alt="享放鬆民宿">
+                </div>
+            </section> 
+            <div class="aboutUs px-5">
+                民宿設施
+            </div>
+            <section class="p-5 ">
+                <div class="fontcolor row">
+                    <div  class="col iconSet pt-4">
+                        <div id="eqIcon" class="col d-flex justify-content-lg-between justify-content-md-between flex-wrap  text-center"></div>
                     </div>
                 </div>
-                
-            </section>      
+            </section>
+                 
         </main>
         <footer></footer>
     </div>

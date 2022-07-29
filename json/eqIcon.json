@@ -1,0 +1,43 @@
+{
+  "product": {
+    "eqIcon": [
+      {
+        "no": "1",
+        "name": "WIFI",
+        "photo": "wifi.png"
+      },
+      {
+        "no": "2",
+        "name": "小冰箱",
+        "photo": "refrigerator.png"
+
+      },
+      {
+        "no": "3",
+        "name": "電視",
+        "photo": "tv.png"
+      },
+      {
+        "no": "4",
+        "name": "飲料吧",
+        "photo": "cafe.png"
+      },
+      {
+        "no": "5",
+        "name": "早餐",
+        "photo": "breakfast.png"
+      },
+      {
+        "no": "6",
+        "name": "停車場",
+        "photo": "parking.png"
+      },
+      {
+        "no": "7",
+        "name": "空調設備",
+        "photo": "conditioner.png"
+      }
+      
+    ]
+  }
+}

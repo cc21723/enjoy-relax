@@ -18,10 +18,6 @@ main a{
     padding: 20px 0;
     /* color: #064b7f; */
 }
-.contactUs h3{
-    /* display: inline-block; */
-    /* border-bottom:3px solid #064b7f; */
-}
 .contactUs::before{
     content: '';
     position: absolute;

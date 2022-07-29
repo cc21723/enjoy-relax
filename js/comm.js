@@ -40,12 +40,12 @@ function mainNavff(){
                 // $(this).next().stop().animate({'left':0});
             })
         }
-
+        $(window).resize();
     }
     var winWidth =window.outerWidth;
     // alert(winWidth);
-
     // setMenu();
+
     
     $(window).resize(function(){
         if (winWidth!=window.outerWidth) {
@@ -55,7 +55,7 @@ function mainNavff(){
         
     })
     setMenu();
-    // $(window).resize();
+    $(window).resize();
 
     $('#menuBtn').click(function(){
         $('#mainNav').stop().slideToggle();

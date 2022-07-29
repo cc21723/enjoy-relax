@@ -1,0 +1,84 @@
+.fontcolor{
+    color: #064b7f;
+}
+.pbgc{
+    background-color: #ffffff80;
+    padding: 15px 0;
+}
+main a{
+    /* list-style-type: none; */
+    text-decoration: none;
+    color: #064b7f;
+}
+li{
+    list-style-type: none;
+}
+.aboutUs{
+    color: #064b7f;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 0;
+    /* color: #064b7f; */
+}
+.aboutUs::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 2px;
+    left: 40px;
+    bottom: 0;
+    background-color: #f0f0f0;
+}
+.aboutUs::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 2px;
+    left: 40px;
+    bottom: 0;
+    background-color: #064b7f;
+}
+.iconSet{ 
+    max-width: 100%;
+    background-color: #ffffff80;
+}
+.iconSet ul{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex: 0 0 calc( 100% - 70px); */
+}
+.iconSet ul li{
+    margin-right: 40px;
+    text-align: center;
+}
+@media (max-width:600px){
+    .findUs{
+        display: none;
+    }
+    .iconSet ul{
+        flex: 0 0 calc( 100% - 30px );
+        /* flex-wrap: wrap; */
+        margin: 0 10px;
+        /* padding: 10px 5px; */
+    }
+    .iconSet ul li{
+       
+    }
+}
+@media (min-width:601px) and (max-width:960px){
+    .findUs{
+        display: none;
+    }
+    .iconSet ul{
+        /* flex: 0 0 calc( 80% - 100px ); */
+        /* flex-wrap: wrap; */
+        /* margin: 0 10px; */
+        /* padding: 10px 5px; */
+    }
+    .iconSet ul li{
+       
+    }
+}
