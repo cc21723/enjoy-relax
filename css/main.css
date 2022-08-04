@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@200&display=swap%27');
 
+.fontcolor{
+    color: #064b7f;
+}
+main a{
+    /* list-style-type: none; */
+    text-decoration: none;
+    color: #064b7f;
+}
 body{
     font-family: 'Noto Sans TC', sans-serif;
     background-image: url(../images/sean.jpg);
@@ -155,7 +163,7 @@ nav ul a{
     float: left; /*要搭配clear:both使用*/
     margin: 0 10px;
 }
-#memNav ul a i{
+#memNav ul>li>a>i{
     position: absolute;
     left: 0;
     transition: .5s;

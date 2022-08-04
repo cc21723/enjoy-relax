@@ -1,12 +1,7 @@
 .fontcolor{
     color: #064b7f;
 }
-.formbgc{
-    padding: 30px 5px;
-    background-color: #ffffffb0;
-}
-
-.contactUs{
+.infoStyle{
     color: #064b7f;
     position: relative;
     font-size: 1.5rem;
@@ -14,7 +9,7 @@
     padding: 20px 0;
     /* color: #064b7f; */
 }
-.contactUs::before{
+.infoStyle::before{
     content: '';
     position: absolute;
     display: block;
@@ -24,7 +19,7 @@
     bottom: 0;
     background-color: #f0f0f0;
 }
-.contactUs::after{
+.infoStyle::after{
     content: '';
     position: absolute;
     display: block;
@@ -34,17 +29,30 @@
     bottom: 0;
     background-color: #064b7f;
 }
-.iconSet li{
-    list-style-type: none;
-    padding: 20px 0;
+.aaa{
+    background-color: #8ba4ca83;
+    color: #064b7f;
 }
-.iconSet i{
-    /* float: none; */
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border: 1px solid #064b7f;
-    border-radius: 50%;
+.accordion-button:not(.collapsed){
+    background-color: #8ba4ca83 !important;
+    color: #064b7f;
+}
+.infoItem{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.421);
+}
+.payment li{
+    list-style-type: none;
+    background-size: 100px 63px;
+}
+.cash{
+    width: 100px;
+    height: 63px;
+    background-image: url(../icon/cash.png);
+    
+}
+.visa{
+    width: 100px;
+    height: 63px;
+    background: url(../icon/visa.png);
 }
