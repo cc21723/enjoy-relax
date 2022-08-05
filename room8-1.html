@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>享放鬆民宿</title>
+    <script src="https://kit.fontawesome.com/b5c87f0d2e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/room.css">
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/comm.js"></script>
+
+
+    <!-- 日曆 -->
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jqueryui/style.css">
+    <script>
+        
+        $(function(){
+            $('header').load('headerContent.html');
+            $('footer').load('footerContent.html',function(){
+                mainNavff();
+               
+            });
+
+            // 日曆
+            $( "#datepicker" ).datepicker();
+
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <main>
+            <nav class="pt-3" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                  <li class="breadcrumb-item"><a href="room.html">放鬆房型</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">放鬆單床雙人房</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="sticky-top" style="z-index: 10;">
+                    <h2>放鬆單床雙人房</h2>
+                    <div class="d-flex justify-content-end align-items-end">
+                        <span class="text-muted">售價 $NT 1,800 /晚</span>
+                        <div class="h3 ms-auto mb-0 text-danger">
+                        <small>特價 NT$</small>
+                        <strong>1,500 /晚</strong>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <span>住宿日期：</span><div id="datepicker"></div>
+
+                    </div>
+                    <div class="input-group input-group-sm mt-3">
+                        <select name="day" id="day" class="form-control me-1">
+                          <option value="1">1 晚</option>
+                          <option value="2">2 晚</option>
+                          <option value="3">3 晚</option>
+                          <option value="4">4 晚</option>
+                          <option value="5">5 晚</option>
+                          <option value="6">6 晚</option>
+                          <option value="7">7 晚</option>
+                          <option value="more">更多請來電洽詢</option>
+                        </select>
+                        <a href="#" class="btn btn-addcar">加入購物車</a>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="imgroom/8-1.png" alt="放鬆單床雙人房"  class="img-fluid">
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            
+            
+        </main>
+        <footer></footer>
+    </div>
+
+    
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+</body>
+</html>

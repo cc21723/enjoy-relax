@@ -1,6 +1,7 @@
 .fontcolor{
     color: #064b7f;
 }
+
 .infoStyle{
     color: #064b7f;
     position: relative;
@@ -44,15 +45,22 @@
 .payment li{
     list-style-type: none;
     background-size: 100px 63px;
-}
-.cash{
     width: 100px;
     height: 63px;
+}
+.cash{
     background-image: url(../icon/cash.png);
     
 }
 .visa{
-    width: 100px;
-    height: 63px;
     background: url(../icon/visa.png);
+}
+.master{
+    background-image: url(../icon/Mastercard.png);
+}
+.civiltravel{
+    background-image: url(../icon/civi.png);
+}
+.infoImg img{
+    width: 100%;
 }

@@ -19,7 +19,7 @@
             $('footer').load('footerContent.html',function(){
                 mainNavff();
                
-            });
+            })
 
         })
     </script>
@@ -39,28 +39,27 @@
             </div>
             
             <div class="row p-5">
-                <div class="col-7">
-
-                    <div class="accordion fontcolor" id="accordionExample">
-                        <div class="accordion-item aaa fontcolor">
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button aaa fontcolor" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              民宿服務
-                            </button>
-                          </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body d-flex flex-wrap ">
-                                <div class="col-4"><li>代購當地土產</li></div>
-                                <div class="col-4"><li>門票優惠券</li></div>
-                                <div class="col-4"><li>伴手禮優惠券</li></div>
-                                <div class="col-4"><li>套裝行程</li></div>
-                                <div class="col-4"><li>代租汽機車</li></div>
-                                <div class="col-4"><li>代訂船票</li></div>
-                                <div class="col-4"><li>免費早餐</li></div>
-                            </div>
-                          </div>
+                <div class="col-md-8 col-sm-12 p-0">
+                  <div class="accordion fontcolor" id="accordionExample">
+                    <div class="accordion-item aaa">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button aaa fontcolor" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          民宿服務
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-md-flex flex-wrap d-sm-block">
+                          <div class="col-4"><li>代購當地土產</li></div>
+                            <div class="col-4"><li>門票優惠券</li></div>
+                            <div class="col-4"><li>伴手禮優惠券</li></div>
+                            <div class="col-4"><li>套裝行程</li></div>
+                            <div class="col-4"><li>代租汽機車</li></div>
+                            <div class="col-4"><li>代訂船票</li></div>
+                            <div class="col-4"><li>免費早餐</li></div>
                         </div>
-                        <div class="accordion-item aaa">
+                      </div>
+                    </div>
+                    <div class="accordion-item aaa">
                           <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button aaa collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                               到店付款
@@ -68,7 +67,7 @@
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <ul class="payment flex-wrap d-flex justify-content-between">
+                              <ul class="payment flex-wrap d-md-flex d-sm-block justify-content-around p-0">
                                 <li class="cash"></li>
                                 <li class="visa"></li>
                                 <li class="master"></li>
@@ -76,25 +75,98 @@
                               </ul>
                             </div>
                           </div>
-                        </div>
-                        <div class="accordion-item aaa">
+                    </div>
+                    <div class="accordion-item aaa">
                           <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button aaa collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Accordion Item #3
+                              匯款資訊
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <p>
+                                  玉山銀行-澎湖分行<br>
+                                  銀行代碼: 808<br>
+                                  帳號: 1000-888-888888<br>
+                                  戶名: 王小明<br>
+                                </p>
+                                <div>
+                                  <ul>
+                                    <li>為確保您的權益，訂房後，請於2日內將訂金(房價的一半)匯款或轉帳至網站上指定之帳號，轉帳(匯款)之後，請以電話或電子郵件方式告知匯款後五碼、姓名、金額、住宿日期及房型，以便核對確認您的訂房。</li>
+                                  </ul>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="accordion-item aaa">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button aaa collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              注意事項
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h3 >平假日定義</h3>
+                                <div>
+                                  <ul>
+                                    <li>連續假期價格依照定價價格</li>
+                                  </ul>
+                                </div>
+                                <h3>入退時間</h3>
+                                <div>
+                                  <ul>
+                                    <li>入住時間：16:00以後</li>
+                                    <li>退房時間：11:00以前</li>
+                                  </ul>
+                                </div>
+                                <h3>住宿須知</h3>
+                                  <ul>
+                                    <li>請先來電預約或加LINE ID: @enjoy-relax</li>
+                                    <li>訂房時間為：早上10點至晚上8點來電訂房</li>
+                                    <li>以電話方式訂房，來電請告知姓名、聯絡電話、住宿日期、住宿房型、人數等(及小孩的年齡以便我們為您服務)</li>
+                                    <li>為確保您的權益，訂房後，請於2日內將訂金(房價的一半)匯款或轉帳至網站上指定之帳號，轉帳(匯款)之後，請以電話或電子郵件方式告知匯款後五碼、姓名、金額、住宿日期及房型，以便核對確認您的訂房</li>
+                                    <li>加人頭費用說明：$500/人(含備品，7歲（含）以上入住，超出每房規定人數必須加人頭費用)</li>
+                                    <li>本民宿無提供加床服務</li>
+                                    <li>民宿服務人員不會一直在櫃檯，若有需要服務的地方請您電話聯繫0900123456</li>
+                                    <li>為維持住宿品質，每日清晨9：00前及晚間22：00後，請勿於房間及公共空間大聲喧嘩吵鬧，請共同住宿品質與寧靜，入住者喧鬧不止時，若經勸導無效，可要求房客立即退房，恕不退還房費。</li>
+                                    <li>個人物品及貴重物品請隨身攜帶並妥善保管，如有遺失恕不負責，請自行報警處理</li>
+                                    <li>室內全面禁菸及嚼檳榔，入住期間造成民宿設備物品損壞或遺失，則會向入住貴賓要求賠償。</li>
+                                    <li>無電梯設備，最高樓層3樓，需自行搬運行李</li>
+                                    <li>民宿有提供機車停車位，可停放至民宿前方，無汽車停車位，可以停放置民宿外圍牆路邊</li>
+                                    <li>無提供早餐，但有提供早餐代訂服務，請於前一日下午４點前選好餐點（若早餐店休息則無法提供代訂服務）</li>
+                                    <li>本民宿公共區域有設置監視器設備，若有異議則才會協助調看監視器畫面。</li>
+                                    <li>本住宿區域謝絕訪客及寵物入住</li>
+                                  </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="accordion-item aaa">
+                          <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button aaa collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              改期退訂
+                            </button>
+                          </h2>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                  <li>預定住宿日前 14 (含 14日)，可退回全部訂金。</li>
+                                  <li>預定住宿日前 10 日至 13 日取消訂房者，可退回 70 %的訂金。</li>
+                                  <li>預定住宿日前 7日至 9 日取消訂房者，可退回 50 %的訂金。</li>
+                                  <li>預定住宿日前 4 日至 6 日取消訂房者，可退回 40 %的訂金。</li>
+                                  <li>預定住宿日前 2 日至 3 日取消訂房者，可退回 30 %的訂金。</li>
+                                  <li>預定住宿日前 1 日取消訂房者，可退回 20% %的訂金。</li>
+                                  <li>預定住宿日當天取消訂房者，不退回訂金。</li>
+                                </ul>
                             </div>
                           </div>
-                        </div>
-                      </div>
-
+                    </div>
+                  </div>
                 </div>
-                <div class="col-4">
-
+                <div class="col-md-4 col-sm-12 align-items-center infoImg mt-sm-3 mt-md-0">
+                    <img src="../images/fireworks.jpg" alt="" >
                 </div>
+                </div>
+                
             </div>
         </main>
         <footer></footer>
