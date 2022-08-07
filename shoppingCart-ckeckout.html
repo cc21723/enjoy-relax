@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>享放鬆民宿</title>
+    <script src="https://kit.fontawesome.com/b5c87f0d2e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/comm.js"></script>
+    <script>
+        
+        $(function(){
+            $('header').load('headerContent.html');
+            $('footer').load('footerContent.html',function(){
+                mainNavff();
+               
+            });
+
+            //表單驗證
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <header></header>
+        </div>
+        <main>
+            <nav class="p-5" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">確認訂單</li>
+                </ol>
+            </nav>
+        
+            <div class="container main-contant py-5">
+                <h2 class="text-center mb-3 text-secondary">享放鬆民宿 結帳</h2>
+                <div class="row text-center">
+                    <div class="col-12 col-sm">
+                        <div class="alert alert-danger alert-rounded" role="alert">
+                            1.輸入訂單資料
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm">
+                        <div class="alert alert-secondary alert-rounded" role="alert">
+                            2.金流付款
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm">
+                        <div class="alert alert-secondary alert-rounded" role="alert">
+                            3.完成
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="accordion-item">
+                        <a class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                顯示購物車細節
+                            </button>
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th width="50">刪除商品</th>
+                                        <th width="150" class="text-center">商品名稱</th>
+                                        <th width="50">數量</th>
+                                        <th width="50" class="text-end">小計</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle text-center">
+                                            <a href="#removeModal" class="texr-muted" data-bs-toggle="modal"
+                                                data-title="刪除 耶誕濃巧克 1 份">
+                                                <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                        <td class="align-middle text-center">耶誕濃巧克</td>
+                                        <td class="align-middle">1 份</td>
+                                        <td class="align-middle text-end">$250</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle text-center">
+                                            <a href="#removeModal" class="texr-muted" data-bs-toggle="modal"
+                                                data-title="刪除 耶誕紅絲絨 1 個">
+                                                <i class="fas fa-trash-alt " aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                        <td class="align-middle text-center">耶誕紅絲絨</td>
+                                        <td class="align-middle">1 份</td>
+                                        <td class="align-middle text-end">$48</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="text-end">運費 60元</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="text-end">合計 10,059元</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <form class="row g-3 p-3 needs-validation " action="shoppingCart-finshed.html" novalidate>
+                        <div class="col-12">
+                            <h2 class="text-center">訂購人資訊</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputname" class="form-label">姓名</label>
+                            <input type="text" class="form-control" id="inputname" placeholder="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCountry" class="form-label">國家</label>
+        
+                            <select class="form-select" id="inputCountry">
+                                <option selected value="台灣">台灣</option>
+                            </select>
+                        </div>
+                        <div class="col-md">
+                            <label for="inputCity" class="form-label">城市</label>
+                            <select class="form-select" id="inputCity" required>
+                                <option selected></option>
+                                <option value="台北市">台北市</option>
+                                <option value="新北市">新北市</option>
+                                <option value="桃園市">桃園市</option>
+                            </select>
+                        </div>
+                        <div class="col-md">
+                            <label for="inputZip" class="form-label">郵遞區號</label>
+                            <input type="number" class="form-control" id="inputZip" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="忠孝東路一段111號" required>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="button" class="btn btn-secondary"><a href="room.html">繼續購物</a></button>
+                            <button type="submit" class="btn btn-primary">確認付款</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title">刪除商品</h5>
+                            <button type="button" class="Close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>是否確認刪除商品</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">否</button>
+                            <button type="button" class="btn btn-outline-danger px-5">是</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+        <!-- Option 2: Separate Popper and Bootstrap JS 分離的腳本 -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+</body>
+</html>
